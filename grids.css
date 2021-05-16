@@ -1,0 +1,83 @@
+@charset "utf-8";
+/*
+
+    Author: Oshman Ansari
+    Date:5/16/21
+    CSS155 Project V2
+    filename: grids.css
+
+    This stylesheet is used to set up the grids
+
+M3LO2 Demonstrate floating elements (All div elements used for the columns in the grid are floated to the left)
+M3LO3 Demonstrate a clearing floats (All div elements used for the rows of the grid are cleared to both sides; the row will appear once its margins are clear of other elements)
+M3LO6 Demonstrate formatting a grid - I used div-class style grids, demonstrated by the row and column style rules and shown in the page as 4 rows of up to 2 columns
+*/
+
+
+/* Grid Rows Styles */
+
+div.row {
+    clear: both;
+}
+
+div.row::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* Grid Columns Styles */
+
+div[class*="column"] {
+    float: left;
+}
+
+figure.product {
+    float: left;
+    width: 33.33%;
+}
+
+div.column1-1 {
+    width: 100%;
+}
+div.column1-2 {
+    width: 50%;
+}
+div.column1-3 {
+    width: 33.33%;
+}
+div.column1-4 {
+    width: 25%;
+}
+div.column1-5 {
+    width: 20%;
+}
+div.column1-6 {
+    width: 16.66%;
+}
+div.column2-3 {
+    width: 66.67%;
+}
+div.column2-5 {
+    width: 40%;
+}
+div.column3-4 {
+    width: 75%;
+}
+div.column3-5 {
+    width: 60%;
+}
+div.column4-5 {
+    width: 80%;
+}
+div.column5-6 {
+    width: 83.33%;
+}
+
+/* Grid Outline Styles */
+/* This section was only used to identify the grid sections
+
+div {
+    outline: 1px solid red;
+}
+*/

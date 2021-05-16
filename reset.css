@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*
+
+This is a reset stylesheet. I have used the reset stylesheet in the tutorial as a guide,
+but have trimmed down the affected elements to what my pages currently use or plan to use, to speed up the site.
+
+M3LO1 Demonstrate the use of a CSS reset style sheet (CSS, note where you have CSS reset rules) 
+    The default browser stylings have been changed:
+    Backgrounds are set to transparent
+    Margins and padding are set to 0
+    Vertical alignment of elements will be in the baseline of their parent element
+    Anchor links are no longer underlined
+
+M3LO11 Demonstrate -prefix- style browser extensions use in CSS (CSS note the use in your CSS and what the purpose is) 
+    Border-box sizing has been used, with browser extensions for mozilla and webkit
+
+*/
+
+/* Structural Styles */
+
+
+
+/* Typographic Styles */
+
+address, article, aside, blockquote, body, div, 
+figcaption, figure, footer, h1, h2, h3, header, html, 
+img, li, main, nav, ol, p, section, ul {
+    background: transparent;
+    font-size: 100%;
+    margin: 0%;
+    padding: 0%;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+}

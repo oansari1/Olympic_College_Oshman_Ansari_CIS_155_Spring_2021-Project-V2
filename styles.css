@@ -1,0 +1,277 @@
+@charset "utf-8";
+/*
+    Author: Oshman Ansari
+    Date:5/16/21
+    CSS155 Project V2
+    filename: styles.css
+
+
+This stylesheet has been created to change the appearance of the pages
+found on my project website. Currently I'm keeping all fonts Tahoma,
+but that will change in the future.
+
+
+Learning outcomes featured in this stylesheet: 
+M3LO8A Demonstrate absolute positioning (CSS, note use in your CSS and describe what its impact is on the HTML) 
+    The citations in reviews.html use absolute positioning, so I can set them in the lower right corner 
+
+M3LO8B Demonstrate relative positioning (CSS, note use in your CSS and describe what its impact is on the HTML) 
+    The columns used in reviews.html have a relative position set.
+
+M3LO9 Demonstrate fixed, static, or inherited positioning (CSS, note explicit use of one of the three in your CSS and what the impact is on the HTML) 
+    The checkout "button" in the aside element uses fixed positioning, to stay at the bottom of the aside element
+
+M3LO10 Demonstrate an overflow setting (CSS, note explicit use of an overflow setting in your CSS and what the impact is on the HTML) 
+    Used overflow-x on the gallery images for portfolio.html and for the aside element on all pages except index.html.
+
+*******I HAVE BEEN UNABLE TO GET EITHER TO WORK AS I WANT!!!*******
+
+    I've tried several different ways, but can't get the images on portfolio.html to display in a single line with a horizontal scrollbar,
+    and the aside element to appear the same size as the body element but with a vertical scroll - adding content just makes the element longer.
+    If both are less than the browser window, there is white space. I can't find a way (within the lessons we've been taught) to fix this.
+    I have spent, collectively, more than 24 hours trying to figure these out. PLEASE HELP!!!!
+
+M4LO2 Demonstrate the use of background images (CSS) 
+    A background image was set for the main element of about.html
+
+M4LO3 Demonstrate the use of rounded corners for borders (CSS) 
+    The corners of the div elements containing reviews were rounded using the border-radius style rule
+
+M4LO4 Demonstrate the use of gradients (CSS) 
+    Div column elements on reviews.html have a radial gradient
+
+M4LO5 Demonstrate the use of text or box shadowing (CSS, note one of these two in your CSS and explain its impact on the HTML) 
+    All h2 headings have a shadow effect directly behind the text
+
+M4LO6 Demonstrate the use of opacity/transparency for images (see 4.2) (CSS) 
+    Opacity was set on "laugh" image on about.html
+
+M4LO8 Demonstrate the use of transformations for 2D or 3D images (CSS, note one of these two in your CSS and explain its impact on the HTML)     
+    Icon images on either side of h1 heading in about.html were rotated using CSS
+
+
+
+*/
+
+/* HTML and Body Styles*/
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+main {
+    background-color: rgba(251, 226, 170, 0.5);
+}
+
+aside {
+    background-color: rgb(192, 192, 192);
+}
+
+/* Heading Styles*/
+
+header {
+    background-color: rgb(142, 142, 142);   
+}
+
+h1 {
+    text-align: center;
+    font: small-caps 2.5em Tahoma;
+}
+
+#abouth1 {
+    float: left;
+    width: fit-content;
+    text-align: center;
+    font: small-caps 2.5em Tahoma;
+}
+
+#h1 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    width: fit-content;
+    height: 50px;
+}
+
+h2 {
+    clear: left;
+    text-align: center;
+    font: small-caps 1.9em Tahoma;
+    text-shadow: gray 0px 0px 10px;
+}
+
+/* Navigation Styles */
+
+nav > div {
+    display: block;
+    text-align: center;
+    background: rgba(160, 81, 45, 0.705);
+    border: 5px outset sienna;
+    padding: 3px;
+}
+
+nav > div > a {
+    color: rgb(149, 201, 60);
+}
+
+
+/* List Styles */
+
+ul ol {
+    color: blueviolet
+}
+
+li.fluff {
+    color: darkorchid
+}
+
+ol > li:nth-of-type(even) {
+    font: italic 1.2em Tahoma;
+}
+
+ol > li:nth-of-type(odd) {
+    font: normal 1.2em impact;
+}
+
+/* Aside Styles */
+
+aside {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* Article Styles*/
+
+#watermark {
+    position: fixed;
+    top: 17em;
+    left: 70%;
+    opacity: .2;
+}
+
+/* Paragraph Styles */
+p {
+    color: seagreen;
+}
+
+p#about {
+    font-size: larger;
+}
+
+p::first-letter {
+    font-size: 125%;
+}
+
+/* Figure Styles */
+
+figcaption {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#giggle {
+    text-align: left;
+    margin-left: 50px;
+}
+
+/* Image Styles */
+
+#sitemap {
+    display: block;
+    margin:auto;
+    width: 50%;
+    height: 40em;
+}
+
+header > div > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; 
+}
+
+#left {
+    float: left;
+    width: 50px;
+    transform: 
+        rotatey(180deg)
+        rotate(70deg);
+}
+
+#right {
+    float: left;
+    width: 50px;
+    transform: rotate(70deg);
+}
+
+/*Because this is a twitter screenshot, and it has the user's name in the image, I'm not sure if I need to attribute further?*/
+#laugh {
+    display: block;
+    margin: 10px auto 10px 10px;
+    width: 200px;
+    opacity: 0.8;
+}
+/*this style rule was set for forsale.html*/
+figure > a > img {
+    display: block;
+    margin: 5% auto;
+    width: 90%;
+   height: 300px;
+}
+
+/* div Styles */
+
+.column1-3 {
+    height: 200px;
+    border: 3px solid rgb(10, 87, 87);
+    border-radius: 3% 20%;
+    text-align: center;
+    position: relative; 
+    background: radial-gradient(circle at center, rgba(255,255,255,0.5), orange);
+}
+
+cite {
+    text-align: end;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+#checkout {
+    text-align: center;
+}
+
+
+#gallery {
+    height: 400px;
+    overflow-x: auto;
+}
+
+#gallery > img {
+    display: block;
+    max-width: 300px;
+    height: 250px;
+    float: left;
+}
+/*checkout button has no function until I learn what to do with it!*/
+#checkout {
+    background: rgba(160, 81, 45, 0.705);
+    border: 5px outset sienna;
+    color: rgb(149, 201, 60);
+    padding: 3px;
+}
+
+#about {
+    background-image: url(Images/welding3.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgb(142, 142, 142);
+    text-align: center;
+}
